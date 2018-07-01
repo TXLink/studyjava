@@ -1,0 +1,3 @@
+#!/bin/bash
+rm target/* -fr && echo 'target clear success'
+javac -sourcepath src -d target .\src\main_pro\me.java

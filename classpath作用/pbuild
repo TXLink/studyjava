@@ -1,0 +1,14 @@
+rm target/* -fr && echo 'target clear success'
+for file in ./lib/*
+do
+  if [ -f $file ]
+   then
+     file_extension=${file##*.}
+     if [ "$file_extension" == "jar" ]
+      then
+       jars=$jars:$file
+     fi
+  fi
+done
+ 
+javac -sourcepath src -classpath $jars -d target src/main_pro/me.java

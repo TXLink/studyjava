@@ -20,4 +20,11 @@ java -classpath target me
 jar -cf news.jar news
 
 ```
+> 运行jar包
+
+```
+java -classpath news.jar;. me
+或者返回上级目录执行：
+java -cp target;target/news.jar me
+```
 
